@@ -48,7 +48,7 @@ type User {
     updated_at: DateTime!
 }
 
-type Submission {
+type Submission @key(fields: "cik")  {
   cik: ID!
   address: String
   category: String
