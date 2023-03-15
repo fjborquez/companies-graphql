@@ -1,4 +1,4 @@
-service: edgar-submissions-graphql
+service: companies-graphql
 
 provider:
     name: aws

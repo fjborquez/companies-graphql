@@ -18,13 +18,13 @@ type Query {
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
 
-    submission(
+    company(
       cik: ID!
-    ): Submission
+    ): Company
 
-    submissions(
+    companies(
       cik: ID @where(operator: "like")
-    ): [Submission]!
+    ): [Company]!
 }
 
 "Account of a person who utilizes this application."
@@ -48,7 +48,7 @@ type User {
     updated_at: DateTime!
 }
 
-type Submission @key(fields: "cik")  {
+type Company @key(fields: "cik")  {
   cik: ID!
   address: String
   category: String

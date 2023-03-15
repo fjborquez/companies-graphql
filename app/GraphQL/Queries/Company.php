@@ -4,7 +4,7 @@ namespace App\GraphQL\Queries;
 
 use Illuminate\Support\Facades\Http;
 
-final class Submission
+final class Company
 {
     /**
      * @param  null  $_
@@ -12,7 +12,7 @@ final class Submission
      */
     public function __invoke($_, array $args)
     {
-        $response = Http::get('https://ljiwoabb82.execute-api.us-east-1.amazonaws.com/api/edgar/submission/' . $args['cik']);
+        $response = Http::get('https://6naqn3cyvi.execute-api.us-east-1.amazonaws.com/api/companies/' . $args['cik']);
 
         return $response->json();
     }
